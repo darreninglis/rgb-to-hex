@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono")
+
+// Variables
+$bg-grey: #eaeaea
+$bg-green: #55efc4
+$box-shadow: 2px 4px 14px #b2bec3
+$font-family: "Roboto Mono", monospace
+
+*
+    margin: 0
+    padding: 0
+    font-family: $font-family
+
+html body main
+    height: 100vh
+
+main
+    background: $bg-grey
+    display: grid
+    grid-template-rows: repeat(6, 1fr)
+    grid-template-columns: repeat(6, 1fr)
+
+#display
+    grid-column: 2 / 6
+    padding: 25px
+    grid-row: 2 / 6
+    background-color: $bg-green
+    color: white
+    border-radius: 7px
+    box-shadow: $box-shadow
+    text-align: center
+    section
+        display: grid
+        grid-template-columns: 3
+        grid-template-rows: 1
+        height: 400px
+        #col-1, #col-2, #col-3
+            margin-top: auto
+            margin-bottom: auto
+        #col-1
+            grid-column-start: 1
+        #col-2
+            grid-column-start: 2
+        #col-3
+            grid-column-start: 3
+
+input [type="range"]
+    width: 200px
+    height: 50px
+
+#hex-label
+    margin-top: 20px
+
+footer
+    display: flex
+    margin-top: auto
+    margin-bottom: 10px
+    justify-content: center
+    grid-column: 3 / 5
+    grid-row-start: 6
